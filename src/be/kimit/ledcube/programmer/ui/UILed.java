@@ -5,11 +5,11 @@ import java.awt.Graphics;
 
 import javax.swing.JToggleButton;
 
-public class Led extends JToggleButton {
+public class UILed extends JToggleButton {
 	
 	private Graphics graphics;
 
-	public Led() {
+	public UILed() {
 		this.setPreferredSize(new Dimension(50,50));
 //		this.setUI(new MetalToggleButtonUI() {
 //		    @Override
