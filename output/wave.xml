@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_45" class="java.beans.XMLDecoder">
+ <object class="be.kimit.ledcube.data.Scenario" id="Scenario0">
+  <void property="scenarioSteps">
+   <void method="add">
+    <object class="be.kimit.ledcube.data.ScenarioStep" id="ScenarioStep0">
+     <void property="layer0">
+      <void property="led0">
+       <boolean>true</boolean>
+      </void>
+      <void property="led1">
+       <boolean>true</boolean>
+      </void>
+      <void property="led10">
+       <boolean>true</boolean>
+      </void>
+      <void property="led11">
+       <boolean>true</boolean>
+      </void>
+      <void property="led12">
+       <boolean>true</boolean>
+      </void>
+      <void property="led13">
+       <boolean>true</boolean>
+      </void>
+      <void property="led14">
+       <boolean>true</boolean>
+      </void>
+      <void property="led15">
+       <boolean>true</boolean>
+      </void>
+      <void property="led2">
+       <boolean>true</boolean>
+      </void>
+      <void property="led3">
+       <boolean>true</boolean>
+      </void>
+      <void property="led4">
+       <boolean>true</boolean>
+      </void>
+      <void property="led5">
+       <boolean>true</boolean>
+      </void>
+      <void property="led6">
+       <boolean>true</boolean>
+      </void>
+      <void property="led7">
+       <boolean>true</boolean>
+      </void>
+      <void property="led8">
+       <boolean>true</boolean>
+      </void>
+      <void property="led9">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="time">
+      <int>100</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="be.kimit.ledcube.data.ScenarioStep" id="ScenarioStep1">
+     <void property="layer0">
+      <void property="led1">
+       <boolean>true</boolean>
+      </void>
+      <void property="led10">
+       <boolean>true</boolean>
+      </void>
+      <void property="led11">
+       <boolean>true</boolean>
+      </void>
+      <void property="led13">
+       <boolean>true</boolean>
+      </void>
+      <void property="led14">
+       <boolean>true</boolean>
+      </void>
+      <void property="led15">
+       <boolean>true</boolean>
+      </void>
+      <void property="led2">
+       <boolean>true</boolean>
+      </void>
+      <void property="led3">
+       <boolean>true</boolean>
+      </void>
+      <void property="led5">
+       <boolean>true</boolean>
+      </void>
+      <void property="led6">
+       <boolean>true</boolean>
+      </void>
+      <void property="led7">
+       <boolean>true</boolean>
+      </void>
+      <void property="led9">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer1">
+      <void property="led0">
+       <boolean>true</boolean>
+      </void>
+      <void property="led12">
+       <boolean>true</boolean>
+      </void>
+      <void property="led4">
+       <boolean>true</boolean>
+      </void>
+      <void property="led8">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="time">
+      <int>100</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="be.kimit.ledcube.data.ScenarioStep" id="ScenarioStep2">
+     <void property="layer0">
+      <void property="led10">
+       <boolean>true</boolean>
+      </void>
+      <void property="led11">
+       <boolean>true</boolean>
+      </void>
+      <void property="led14">
+       <boolean>true</boolean>
+      </void>
+      <void property="led15">
+       <boolean>true</boolean>
+      </void>
+      <void property="led2">
+       <boolean>true</boolean>
+      </void>
+      <void property="led3">
+       <boolean>true</boolean>
+      </void>
+      <void property="led6">
+       <boolean>true</boolean>
+      </void>
+      <void property="led7">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer1">
+      <void property="led1">
+       <boolean>true</boolean>
+      </void>
+      <void property="led13">
+       <boolean>true</boolean>
+      </void>
+      <void property="led5">
+       <boolean>true</boolean>
+      </void>
+      <void property="led9">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer2">
+      <void property="led0">
+       <boolean>true</boolean>
+      </void>
+      <void property="led12">
+       <boolean>true</boolean>
+      </void>
+      <void property="led4">
+       <boolean>true</boolean>
+      </void>
+      <void property="led8">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="time">
+      <int>100</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="be.kimit.ledcube.data.ScenarioStep" id="ScenarioStep3">
+     <void property="layer0">
+      <void property="led11">
+       <boolean>true</boolean>
+      </void>
+      <void property="led15">
+       <boolean>true</boolean>
+      </void>
+      <void property="led3">
+       <boolean>true</boolean>
+      </void>
+      <void property="led7">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer1">
+      <void property="led10">
+       <boolean>true</boolean>
+      </void>
+      <void property="led14">
+       <boolean>true</boolean>
+      </void>
+      <void property="led2">
+       <boolean>true</boolean>
+      </void>
+      <void property="led6">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer2">
+      <void property="led1">
+       <boolean>true</boolean>
+      </void>
+      <void property="led13">
+       <boolean>true</boolean>
+      </void>
+      <void property="led5">
+       <boolean>true</boolean>
+      </void>
+      <void property="led9">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer3">
+      <void property="led0">
+       <boolean>true</boolean>
+      </void>
+      <void property="led12">
+       <boolean>true</boolean>
+      </void>
+      <void property="led4">
+       <boolean>true</boolean>
+      </void>
+      <void property="led8">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="time">
+      <int>100</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="be.kimit.ledcube.data.ScenarioStep" id="ScenarioStep4">
+     <void property="layer1">
+      <void property="led11">
+       <boolean>true</boolean>
+      </void>
+      <void property="led15">
+       <boolean>true</boolean>
+      </void>
+      <void property="led3">
+       <boolean>true</boolean>
+      </void>
+      <void property="led7">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer2">
+      <void property="led10">
+       <boolean>true</boolean>
+      </void>
+      <void property="led14">
+       <boolean>true</boolean>
+      </void>
+      <void property="led2">
+       <boolean>true</boolean>
+      </void>
+      <void property="led6">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer3">
+      <void property="led0">
+       <boolean>true</boolean>
+      </void>
+      <void property="led1">
+       <boolean>true</boolean>
+      </void>
+      <void property="led12">
+       <boolean>true</boolean>
+      </void>
+      <void property="led13">
+       <boolean>true</boolean>
+      </void>
+      <void property="led4">
+       <boolean>true</boolean>
+      </void>
+      <void property="led5">
+       <boolean>true</boolean>
+      </void>
+      <void property="led8">
+       <boolean>true</boolean>
+      </void>
+      <void property="led9">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="time">
+      <int>100</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="be.kimit.ledcube.data.ScenarioStep" id="ScenarioStep5">
+     <void property="layer2">
+      <void property="led11">
+       <boolean>true</boolean>
+      </void>
+      <void property="led15">
+       <boolean>true</boolean>
+      </void>
+      <void property="led3">
+       <boolean>true</boolean>
+      </void>
+      <void property="led7">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer3">
+      <void property="led0">
+       <boolean>true</boolean>
+      </void>
+      <void property="led1">
+       <boolean>true</boolean>
+      </void>
+      <void property="led10">
+       <boolean>true</boolean>
+      </void>
+      <void property="led12">
+       <boolean>true</boolean>
+      </void>
+      <void property="led13">
+       <boolean>true</boolean>
+      </void>
+      <void property="led14">
+       <boolean>true</boolean>
+      </void>
+      <void property="led2">
+       <boolean>true</boolean>
+      </void>
+      <void property="led4">
+       <boolean>true</boolean>
+      </void>
+      <void property="led5">
+       <boolean>true</boolean>
+      </void>
+      <void property="led6">
+       <boolean>true</boolean>
+      </void>
+      <void property="led8">
+       <boolean>true</boolean>
+      </void>
+      <void property="led9">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="time">
+      <int>100</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="be.kimit.ledcube.data.ScenarioStep" id="ScenarioStep6">
+     <void property="layer3">
+      <void property="led0">
+       <boolean>true</boolean>
+      </void>
+      <void property="led1">
+       <boolean>true</boolean>
+      </void>
+      <void property="led10">
+       <boolean>true</boolean>
+      </void>
+      <void property="led11">
+       <boolean>true</boolean>
+      </void>
+      <void property="led12">
+       <boolean>true</boolean>
+      </void>
+      <void property="led13">
+       <boolean>true</boolean>
+      </void>
+      <void property="led14">
+       <boolean>true</boolean>
+      </void>
+      <void property="led15">
+       <boolean>true</boolean>
+      </void>
+      <void property="led2">
+       <boolean>true</boolean>
+      </void>
+      <void property="led3">
+       <boolean>true</boolean>
+      </void>
+      <void property="led4">
+       <boolean>true</boolean>
+      </void>
+      <void property="led5">
+       <boolean>true</boolean>
+      </void>
+      <void property="led6">
+       <boolean>true</boolean>
+      </void>
+      <void property="led7">
+       <boolean>true</boolean>
+      </void>
+      <void property="led8">
+       <boolean>true</boolean>
+      </void>
+      <void property="led9">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="time">
+      <int>100</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="be.kimit.ledcube.data.ScenarioStep" id="ScenarioStep7">
+     <void property="layer2">
+      <void property="led0">
+       <boolean>true</boolean>
+      </void>
+      <void property="led12">
+       <boolean>true</boolean>
+      </void>
+      <void property="led4">
+       <boolean>true</boolean>
+      </void>
+      <void property="led8">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer3">
+      <void property="led1">
+       <boolean>true</boolean>
+      </void>
+      <void property="led10">
+       <boolean>true</boolean>
+      </void>
+      <void property="led11">
+       <boolean>true</boolean>
+      </void>
+      <void property="led13">
+       <boolean>true</boolean>
+      </void>
+      <void property="led14">
+       <boolean>true</boolean>
+      </void>
+      <void property="led15">
+       <boolean>true</boolean>
+      </void>
+      <void property="led2">
+       <boolean>true</boolean>
+      </void>
+      <void property="led3">
+       <boolean>true</boolean>
+      </void>
+      <void property="led5">
+       <boolean>true</boolean>
+      </void>
+      <void property="led6">
+       <boolean>true</boolean>
+      </void>
+      <void property="led7">
+       <boolean>true</boolean>
+      </void>
+      <void property="led9">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="time">
+      <int>100</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="be.kimit.ledcube.data.ScenarioStep" id="ScenarioStep8">
+     <void property="layer1">
+      <void property="led0">
+       <boolean>true</boolean>
+      </void>
+      <void property="led12">
+       <boolean>true</boolean>
+      </void>
+      <void property="led4">
+       <boolean>true</boolean>
+      </void>
+      <void property="led8">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer2">
+      <void property="led1">
+       <boolean>true</boolean>
+      </void>
+      <void property="led13">
+       <boolean>true</boolean>
+      </void>
+      <void property="led5">
+       <boolean>true</boolean>
+      </void>
+      <void property="led9">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer3">
+      <void property="led10">
+       <boolean>true</boolean>
+      </void>
+      <void property="led11">
+       <boolean>true</boolean>
+      </void>
+      <void property="led14">
+       <boolean>true</boolean>
+      </void>
+      <void property="led15">
+       <boolean>true</boolean>
+      </void>
+      <void property="led2">
+       <boolean>true</boolean>
+      </void>
+      <void property="led3">
+       <boolean>true</boolean>
+      </void>
+      <void property="led6">
+       <boolean>true</boolean>
+      </void>
+      <void property="led7">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="time">
+      <int>100</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="be.kimit.ledcube.data.ScenarioStep" id="ScenarioStep9">
+     <void property="layer0">
+      <void property="led0">
+       <boolean>true</boolean>
+      </void>
+      <void property="led12">
+       <boolean>true</boolean>
+      </void>
+      <void property="led4">
+       <boolean>true</boolean>
+      </void>
+      <void property="led8">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer1">
+      <void property="led1">
+       <boolean>true</boolean>
+      </void>
+      <void property="led13">
+       <boolean>true</boolean>
+      </void>
+      <void property="led5">
+       <boolean>true</boolean>
+      </void>
+      <void property="led9">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer2">
+      <void property="led10">
+       <boolean>true</boolean>
+      </void>
+      <void property="led14">
+       <boolean>true</boolean>
+      </void>
+      <void property="led2">
+       <boolean>true</boolean>
+      </void>
+      <void property="led6">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer3">
+      <void property="led11">
+       <boolean>true</boolean>
+      </void>
+      <void property="led15">
+       <boolean>true</boolean>
+      </void>
+      <void property="led3">
+       <boolean>true</boolean>
+      </void>
+      <void property="led7">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="time">
+      <int>100</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="be.kimit.ledcube.data.ScenarioStep" id="ScenarioStep10">
+     <void property="layer0">
+      <void property="led0">
+       <boolean>true</boolean>
+      </void>
+      <void property="led1">
+       <boolean>true</boolean>
+      </void>
+      <void property="led12">
+       <boolean>true</boolean>
+      </void>
+      <void property="led13">
+       <boolean>true</boolean>
+      </void>
+      <void property="led4">
+       <boolean>true</boolean>
+      </void>
+      <void property="led5">
+       <boolean>true</boolean>
+      </void>
+      <void property="led8">
+       <boolean>true</boolean>
+      </void>
+      <void property="led9">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer1">
+      <void property="led10">
+       <boolean>true</boolean>
+      </void>
+      <void property="led14">
+       <boolean>true</boolean>
+      </void>
+      <void property="led2">
+       <boolean>true</boolean>
+      </void>
+      <void property="led6">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer2">
+      <void property="led11">
+       <boolean>true</boolean>
+      </void>
+      <void property="led15">
+       <boolean>true</boolean>
+      </void>
+      <void property="led3">
+       <boolean>true</boolean>
+      </void>
+      <void property="led7">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="time">
+      <int>100</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="be.kimit.ledcube.data.ScenarioStep" id="ScenarioStep11">
+     <void property="layer0">
+      <void property="led0">
+       <boolean>true</boolean>
+      </void>
+      <void property="led1">
+       <boolean>true</boolean>
+      </void>
+      <void property="led10">
+       <boolean>true</boolean>
+      </void>
+      <void property="led12">
+       <boolean>true</boolean>
+      </void>
+      <void property="led13">
+       <boolean>true</boolean>
+      </void>
+      <void property="led14">
+       <boolean>true</boolean>
+      </void>
+      <void property="led2">
+       <boolean>true</boolean>
+      </void>
+      <void property="led4">
+       <boolean>true</boolean>
+      </void>
+      <void property="led5">
+       <boolean>true</boolean>
+      </void>
+      <void property="led6">
+       <boolean>true</boolean>
+      </void>
+      <void property="led8">
+       <boolean>true</boolean>
+      </void>
+      <void property="led9">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="layer1">
+      <void property="led11">
+       <boolean>true</boolean>
+      </void>
+      <void property="led15">
+       <boolean>true</boolean>
+      </void>
+      <void property="led3">
+       <boolean>true</boolean>
+      </void>
+      <void property="led7">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="time">
+      <int>100</int>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>

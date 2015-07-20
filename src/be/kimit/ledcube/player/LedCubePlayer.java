@@ -16,7 +16,7 @@ public class LedCubePlayer implements Runnable{
 	private int[] layer1 = new int[16];
 	private int[] layer2 = new int[16];
 	private int[] layer3 = new int[16];
-	private static int SLEEP_TIME = 4;
+	private static int SLEEP_TIME = 3;
 	
 
 	public LedCubePlayer(String file) throws FileNotFoundException, InterruptedException {
