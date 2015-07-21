@@ -173,11 +173,7 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 	}
 
 	private void setTotalStepsCounter() {
-	      SwingUtilities.invokeLater(new Runnable(){
-	          @Override public void run() {
-	        	  totalStepsCounter.setText(String.valueOf(scenario.getScenarioSteps().size()));
-	          }
-	      });
+	    totalStepsCounter.setText(String.valueOf(scenario.getScenarioSteps().size()));
 	}
 
 	private void setPreviousState(int index) {
@@ -190,83 +186,84 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 
 	private void setUIToScenarioStep(ScenarioStep scenarioStep) {
 		
+		LedLayer layer0 = scenarioStep.getLayer0();
+		uiLedLayer0.getLed0().setState(layer0.isLed0());
+		uiLedLayer0.getLed1().setState(layer0.isLed1());
+		uiLedLayer0.getLed2().setState(layer0.isLed2());
+		uiLedLayer0.getLed3().setState(layer0.isLed3());
+		uiLedLayer0.getLed4().setState(layer0.isLed4());
+		uiLedLayer0.getLed5().setState(layer0.isLed5());
+		uiLedLayer0.getLed6().setState(layer0.isLed6());
+		uiLedLayer0.getLed7().setState(layer0.isLed7());
+		uiLedLayer0.getLed8().setState(layer0.isLed8());
+		uiLedLayer0.getLed9().setState(layer0.isLed9());
+		uiLedLayer0.getLed10().setState(layer0.isLed10());
+		uiLedLayer0.getLed11().setState(layer0.isLed11());
+		uiLedLayer0.getLed12().setState(layer0.isLed12());
+		uiLedLayer0.getLed13().setState(layer0.isLed13());
+		uiLedLayer0.getLed14().setState(layer0.isLed14());
+		uiLedLayer0.getLed15().setState(layer0.isLed15());
+		
+		LedLayer layer1 = scenarioStep.getLayer1();
+		uiLedLayer1.getLed0().setState(layer1.isLed0());
+		uiLedLayer1.getLed1().setState(layer1.isLed1());
+		uiLedLayer1.getLed2().setState(layer1.isLed2());
+		uiLedLayer1.getLed3().setState(layer1.isLed3());
+		uiLedLayer1.getLed4().setState(layer1.isLed4());
+		uiLedLayer1.getLed5().setState(layer1.isLed5());
+		uiLedLayer1.getLed6().setState(layer1.isLed6());
+		uiLedLayer1.getLed7().setState(layer1.isLed7());
+		uiLedLayer1.getLed8().setState(layer1.isLed8());
+		uiLedLayer1.getLed9().setState(layer1.isLed9());
+		uiLedLayer1.getLed10().setState(layer1.isLed10());
+		uiLedLayer1.getLed11().setState(layer1.isLed11());
+		uiLedLayer1.getLed12().setState(layer1.isLed12());
+		uiLedLayer1.getLed13().setState(layer1.isLed13());
+		uiLedLayer1.getLed14().setState(layer1.isLed14());
+		uiLedLayer1.getLed15().setState(layer1.isLed15());		
+		
+		LedLayer layer2 = scenarioStep.getLayer2();
+		uiLedLayer2.getLed0().setState(layer2.isLed0());
+		uiLedLayer2.getLed1().setState(layer2.isLed1());
+		uiLedLayer2.getLed2().setState(layer2.isLed2());
+		uiLedLayer2.getLed3().setState(layer2.isLed3());
+		uiLedLayer2.getLed4().setState(layer2.isLed4());
+		uiLedLayer2.getLed5().setState(layer2.isLed5());
+		uiLedLayer2.getLed6().setState(layer2.isLed6());
+		uiLedLayer2.getLed7().setState(layer2.isLed7());
+		uiLedLayer2.getLed8().setState(layer2.isLed8());
+		uiLedLayer2.getLed9().setState(layer2.isLed9());
+		uiLedLayer2.getLed10().setState(layer2.isLed10());
+		uiLedLayer2.getLed11().setState(layer2.isLed11());
+		uiLedLayer2.getLed12().setState(layer2.isLed12());
+		uiLedLayer2.getLed13().setState(layer2.isLed13());
+		uiLedLayer2.getLed14().setState(layer2.isLed14());
+		uiLedLayer2.getLed15().setState(layer2.isLed15());		
+	
+		LedLayer layer3 = scenarioStep.getLayer3();
+		uiLedLayer3.getLed0().setState(layer3.isLed0());
+		uiLedLayer3.getLed1().setState(layer3.isLed1());
+		uiLedLayer3.getLed2().setState(layer3.isLed2());
+		uiLedLayer3.getLed3().setState(layer3.isLed3());
+		uiLedLayer3.getLed4().setState(layer3.isLed4());
+		uiLedLayer3.getLed5().setState(layer3.isLed5());
+		uiLedLayer3.getLed6().setState(layer3.isLed6());
+		uiLedLayer3.getLed7().setState(layer3.isLed7());
+		uiLedLayer3.getLed8().setState(layer3.isLed8());
+		uiLedLayer3.getLed9().setState(layer3.isLed9());
+		uiLedLayer3.getLed10().setState(layer3.isLed10());
+		uiLedLayer3.getLed11().setState(layer3.isLed11());
+		uiLedLayer3.getLed12().setState(layer3.isLed12());
+		uiLedLayer3.getLed13().setState(layer3.isLed13());
+		uiLedLayer3.getLed14().setState(layer3.isLed14());
+		uiLedLayer3.getLed15().setState(layer3.isLed15());		
+		
+		JFrame frame = this;
+		time.setText(String.valueOf(scenarioStep.getTime()));
 	      SwingUtilities.invokeLater(new Runnable(){
 	          @Override public void run() {
-		
-				LedLayer layer0 = scenarioStep.getLayer0();
-				uiLedLayer0.getLed0().setState(layer0.isLed0());
-				uiLedLayer0.getLed1().setState(layer0.isLed1());
-				uiLedLayer0.getLed2().setState(layer0.isLed2());
-				uiLedLayer0.getLed3().setState(layer0.isLed3());
-				uiLedLayer0.getLed4().setState(layer0.isLed4());
-				uiLedLayer0.getLed5().setState(layer0.isLed5());
-				uiLedLayer0.getLed6().setState(layer0.isLed6());
-				uiLedLayer0.getLed7().setState(layer0.isLed7());
-				uiLedLayer0.getLed8().setState(layer0.isLed8());
-				uiLedLayer0.getLed9().setState(layer0.isLed9());
-				uiLedLayer0.getLed10().setState(layer0.isLed10());
-				uiLedLayer0.getLed11().setState(layer0.isLed11());
-				uiLedLayer0.getLed12().setState(layer0.isLed12());
-				uiLedLayer0.getLed13().setState(layer0.isLed13());
-				uiLedLayer0.getLed14().setState(layer0.isLed14());
-				uiLedLayer0.getLed15().setState(layer0.isLed15());
-				
-				LedLayer layer1 = scenarioStep.getLayer1();
-				uiLedLayer1.getLed0().setState(layer1.isLed0());
-				uiLedLayer1.getLed1().setState(layer1.isLed1());
-				uiLedLayer1.getLed2().setState(layer1.isLed2());
-				uiLedLayer1.getLed3().setState(layer1.isLed3());
-				uiLedLayer1.getLed4().setState(layer1.isLed4());
-				uiLedLayer1.getLed5().setState(layer1.isLed5());
-				uiLedLayer1.getLed6().setState(layer1.isLed6());
-				uiLedLayer1.getLed7().setState(layer1.isLed7());
-				uiLedLayer1.getLed8().setState(layer1.isLed8());
-				uiLedLayer1.getLed9().setState(layer1.isLed9());
-				uiLedLayer1.getLed10().setState(layer1.isLed10());
-				uiLedLayer1.getLed11().setState(layer1.isLed11());
-				uiLedLayer1.getLed12().setState(layer1.isLed12());
-				uiLedLayer1.getLed13().setState(layer1.isLed13());
-				uiLedLayer1.getLed14().setState(layer1.isLed14());
-				uiLedLayer1.getLed15().setState(layer1.isLed15());		
-				
-				LedLayer layer2 = scenarioStep.getLayer2();
-				uiLedLayer2.getLed0().setState(layer2.isLed0());
-				uiLedLayer2.getLed1().setState(layer2.isLed1());
-				uiLedLayer2.getLed2().setState(layer2.isLed2());
-				uiLedLayer2.getLed3().setState(layer2.isLed3());
-				uiLedLayer2.getLed4().setState(layer2.isLed4());
-				uiLedLayer2.getLed5().setState(layer2.isLed5());
-				uiLedLayer2.getLed6().setState(layer2.isLed6());
-				uiLedLayer2.getLed7().setState(layer2.isLed7());
-				uiLedLayer2.getLed8().setState(layer2.isLed8());
-				uiLedLayer2.getLed9().setState(layer2.isLed9());
-				uiLedLayer2.getLed10().setState(layer2.isLed10());
-				uiLedLayer2.getLed11().setState(layer2.isLed11());
-				uiLedLayer2.getLed12().setState(layer2.isLed12());
-				uiLedLayer2.getLed13().setState(layer2.isLed13());
-				uiLedLayer2.getLed14().setState(layer2.isLed14());
-				uiLedLayer2.getLed15().setState(layer2.isLed15());		
-			
-				LedLayer layer3 = scenarioStep.getLayer3();
-				uiLedLayer3.getLed0().setState(layer3.isLed0());
-				uiLedLayer3.getLed1().setState(layer3.isLed1());
-				uiLedLayer3.getLed2().setState(layer3.isLed2());
-				uiLedLayer3.getLed3().setState(layer3.isLed3());
-				uiLedLayer3.getLed4().setState(layer3.isLed4());
-				uiLedLayer3.getLed5().setState(layer3.isLed5());
-				uiLedLayer3.getLed6().setState(layer3.isLed6());
-				uiLedLayer3.getLed7().setState(layer3.isLed7());
-				uiLedLayer3.getLed8().setState(layer3.isLed8());
-				uiLedLayer3.getLed9().setState(layer3.isLed9());
-				uiLedLayer3.getLed10().setState(layer3.isLed10());
-				uiLedLayer3.getLed11().setState(layer3.isLed11());
-				uiLedLayer3.getLed12().setState(layer3.isLed12());
-				uiLedLayer3.getLed13().setState(layer3.isLed13());
-				uiLedLayer3.getLed14().setState(layer3.isLed14());
-				uiLedLayer3.getLed15().setState(layer3.isLed15());		
-				
-				time.setText(String.valueOf(scenarioStep.getTime()));
-		      }
+	        	 frame.invalidate();
+	          }
 	      });
 	      
 	}
