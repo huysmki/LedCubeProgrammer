@@ -76,6 +76,7 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 		previousButton.setActionCommand(PREVIOUS);
 		previousButton.addActionListener(this);
 		previousButton.setEnabled(false);
+		previousButton.setFocusable(false);
 		stepPanel.add(previousButton);
 		stepCounter = new JTextField("0");
 		stepCounter.setColumns(3);
@@ -84,6 +85,7 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 		nextButton = new JButton("Next");
 		nextButton.addActionListener(this);
 		nextButton.setActionCommand(NEXT);
+		nextButton.setFocusable(false);
 		stepPanel.add(nextButton);
 		
 		stepPanel.add(new JLabel("time (ms) :"));
@@ -187,161 +189,82 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 	private void setUIToScenarioStep(ScenarioStep scenarioStep) {
 		
 		LedLayer layer0 = scenarioStep.getLayer0();
-		uiLedLayer0.getLed0().setState(layer0.isLed0());
-		uiLedLayer0.getLed1().setState(layer0.isLed1());
-		uiLedLayer0.getLed2().setState(layer0.isLed2());
-		uiLedLayer0.getLed3().setState(layer0.isLed3());
-		uiLedLayer0.getLed4().setState(layer0.isLed4());
-		uiLedLayer0.getLed5().setState(layer0.isLed5());
-		uiLedLayer0.getLed6().setState(layer0.isLed6());
-		uiLedLayer0.getLed7().setState(layer0.isLed7());
-		uiLedLayer0.getLed8().setState(layer0.isLed8());
-		uiLedLayer0.getLed9().setState(layer0.isLed9());
-		uiLedLayer0.getLed10().setState(layer0.isLed10());
-		uiLedLayer0.getLed11().setState(layer0.isLed11());
-		uiLedLayer0.getLed12().setState(layer0.isLed12());
-		uiLedLayer0.getLed13().setState(layer0.isLed13());
-		uiLedLayer0.getLed14().setState(layer0.isLed14());
-		uiLedLayer0.getLed15().setState(layer0.isLed15());
+		retrieveLedStates(layer0, uiLedLayer0);
 		
 		LedLayer layer1 = scenarioStep.getLayer1();
-		uiLedLayer1.getLed0().setState(layer1.isLed0());
-		uiLedLayer1.getLed1().setState(layer1.isLed1());
-		uiLedLayer1.getLed2().setState(layer1.isLed2());
-		uiLedLayer1.getLed3().setState(layer1.isLed3());
-		uiLedLayer1.getLed4().setState(layer1.isLed4());
-		uiLedLayer1.getLed5().setState(layer1.isLed5());
-		uiLedLayer1.getLed6().setState(layer1.isLed6());
-		uiLedLayer1.getLed7().setState(layer1.isLed7());
-		uiLedLayer1.getLed8().setState(layer1.isLed8());
-		uiLedLayer1.getLed9().setState(layer1.isLed9());
-		uiLedLayer1.getLed10().setState(layer1.isLed10());
-		uiLedLayer1.getLed11().setState(layer1.isLed11());
-		uiLedLayer1.getLed12().setState(layer1.isLed12());
-		uiLedLayer1.getLed13().setState(layer1.isLed13());
-		uiLedLayer1.getLed14().setState(layer1.isLed14());
-		uiLedLayer1.getLed15().setState(layer1.isLed15());		
+		retrieveLedStates(layer1, uiLedLayer1);
 		
 		LedLayer layer2 = scenarioStep.getLayer2();
-		uiLedLayer2.getLed0().setState(layer2.isLed0());
-		uiLedLayer2.getLed1().setState(layer2.isLed1());
-		uiLedLayer2.getLed2().setState(layer2.isLed2());
-		uiLedLayer2.getLed3().setState(layer2.isLed3());
-		uiLedLayer2.getLed4().setState(layer2.isLed4());
-		uiLedLayer2.getLed5().setState(layer2.isLed5());
-		uiLedLayer2.getLed6().setState(layer2.isLed6());
-		uiLedLayer2.getLed7().setState(layer2.isLed7());
-		uiLedLayer2.getLed8().setState(layer2.isLed8());
-		uiLedLayer2.getLed9().setState(layer2.isLed9());
-		uiLedLayer2.getLed10().setState(layer2.isLed10());
-		uiLedLayer2.getLed11().setState(layer2.isLed11());
-		uiLedLayer2.getLed12().setState(layer2.isLed12());
-		uiLedLayer2.getLed13().setState(layer2.isLed13());
-		uiLedLayer2.getLed14().setState(layer2.isLed14());
-		uiLedLayer2.getLed15().setState(layer2.isLed15());		
+		retrieveLedStates(layer2, uiLedLayer2);
+	
 	
 		LedLayer layer3 = scenarioStep.getLayer3();
-		uiLedLayer3.getLed0().setState(layer3.isLed0());
-		uiLedLayer3.getLed1().setState(layer3.isLed1());
-		uiLedLayer3.getLed2().setState(layer3.isLed2());
-		uiLedLayer3.getLed3().setState(layer3.isLed3());
-		uiLedLayer3.getLed4().setState(layer3.isLed4());
-		uiLedLayer3.getLed5().setState(layer3.isLed5());
-		uiLedLayer3.getLed6().setState(layer3.isLed6());
-		uiLedLayer3.getLed7().setState(layer3.isLed7());
-		uiLedLayer3.getLed8().setState(layer3.isLed8());
-		uiLedLayer3.getLed9().setState(layer3.isLed9());
-		uiLedLayer3.getLed10().setState(layer3.isLed10());
-		uiLedLayer3.getLed11().setState(layer3.isLed11());
-		uiLedLayer3.getLed12().setState(layer3.isLed12());
-		uiLedLayer3.getLed13().setState(layer3.isLed13());
-		uiLedLayer3.getLed14().setState(layer3.isLed14());
-		uiLedLayer3.getLed15().setState(layer3.isLed15());		
+		retrieveLedStates(layer3, uiLedLayer3);
 		
-		JFrame frame = this;
 		time.setText(String.valueOf(scenarioStep.getTime()));
-	      SwingUtilities.invokeLater(new Runnable(){
-	          @Override public void run() {
-	        	 frame.invalidate();
-	          }
-	      });
+	    SwingUtilities.invokeLater(new Runnable(){
+	        @Override public void run() {
+	        	uiLedLayer0.invalidate();
+	        	uiLedLayer1.invalidate();
+	        	uiLedLayer2.invalidate();
+	        	uiLedLayer3.invalidate();
+	        }
+	    });
 	      
+	}
+
+	private void retrieveLedStates(LedLayer layer, UILedLayer uiLedLayer) {
+		uiLedLayer.getLed0().setState(layer.isLed0());
+		uiLedLayer.getLed1().setState(layer.isLed1());
+		uiLedLayer.getLed2().setState(layer.isLed2());
+		uiLedLayer.getLed3().setState(layer.isLed3());
+		uiLedLayer.getLed4().setState(layer.isLed4());
+		uiLedLayer.getLed5().setState(layer.isLed5());
+		uiLedLayer.getLed6().setState(layer.isLed6());
+		uiLedLayer.getLed7().setState(layer.isLed7());
+		uiLedLayer.getLed8().setState(layer.isLed8());
+		uiLedLayer.getLed9().setState(layer.isLed9());
+		uiLedLayer.getLed10().setState(layer.isLed10());
+		uiLedLayer.getLed11().setState(layer.isLed11());
+		uiLedLayer.getLed12().setState(layer.isLed12());
+		uiLedLayer.getLed13().setState(layer.isLed13());
+		uiLedLayer.getLed14().setState(layer.isLed14());
+		uiLedLayer.getLed15().setState(layer.isLed15());
 	}
 
 	private void saveUIToScenarioStep(ScenarioStep scenarioStep) {
 		LedLayer layer0 = scenarioStep.getLayer0();
-		layer0.setLed0(uiLedLayer0.getLed0().getState());
-		layer0.setLed1(uiLedLayer0.getLed1().getState());
-		layer0.setLed2(uiLedLayer0.getLed2().getState());		
-		layer0.setLed3(uiLedLayer0.getLed3().getState());		
-		layer0.setLed4(uiLedLayer0.getLed4().getState());		
-		layer0.setLed5(uiLedLayer0.getLed5().getState());		
-		layer0.setLed6(uiLedLayer0.getLed6().getState());		
-		layer0.setLed7(uiLedLayer0.getLed7().getState());		
-		layer0.setLed8(uiLedLayer0.getLed8().getState());		
-		layer0.setLed9(uiLedLayer0.getLed9().getState());		
-		layer0.setLed10(uiLedLayer0.getLed10().getState());		
-		layer0.setLed11(uiLedLayer0.getLed11().getState());		
-		layer0.setLed12(uiLedLayer0.getLed12().getState());		
-		layer0.setLed13(uiLedLayer0.getLed13().getState());		
-		layer0.setLed14(uiLedLayer0.getLed14().getState());		
-		layer0.setLed15(uiLedLayer0.getLed15().getState());		
+		saveLedStates(layer0, uiLedLayer0);		
 		
 		LedLayer layer1 = scenarioStep.getLayer1();
-		layer1.setLed0(uiLedLayer1.getLed0().getState());
-		layer1.setLed1(uiLedLayer1.getLed1().getState());
-		layer1.setLed2(uiLedLayer1.getLed2().getState());		
-		layer1.setLed3(uiLedLayer1.getLed3().getState());		
-		layer1.setLed4(uiLedLayer1.getLed4().getState());		
-		layer1.setLed5(uiLedLayer1.getLed5().getState());		
-		layer1.setLed6(uiLedLayer1.getLed6().getState());		
-		layer1.setLed7(uiLedLayer1.getLed7().getState());		
-		layer1.setLed8(uiLedLayer1.getLed8().getState());		
-		layer1.setLed9(uiLedLayer1.getLed9().getState());		
-		layer1.setLed10(uiLedLayer1.getLed10().getState());		
-		layer1.setLed11(uiLedLayer1.getLed11().getState());		
-		layer1.setLed12(uiLedLayer1.getLed12().getState());		
-		layer1.setLed13(uiLedLayer1.getLed13().getState());		
-		layer1.setLed14(uiLedLayer1.getLed14().getState());		
-		layer1.setLed15(uiLedLayer1.getLed15().getState());	
+		saveLedStates(layer1, uiLedLayer1);		
 		
 		LedLayer layer2 = scenarioStep.getLayer2();
-		layer2.setLed0(uiLedLayer2.getLed0().getState());
-		layer2.setLed1(uiLedLayer2.getLed1().getState());
-		layer2.setLed2(uiLedLayer2.getLed2().getState());		
-		layer2.setLed3(uiLedLayer2.getLed3().getState());		
-		layer2.setLed4(uiLedLayer2.getLed4().getState());		
-		layer2.setLed5(uiLedLayer2.getLed5().getState());		
-		layer2.setLed6(uiLedLayer2.getLed6().getState());		
-		layer2.setLed7(uiLedLayer2.getLed7().getState());		
-		layer2.setLed8(uiLedLayer2.getLed8().getState());		
-		layer2.setLed9(uiLedLayer2.getLed9().getState());		
-		layer2.setLed10(uiLedLayer2.getLed10().getState());		
-		layer2.setLed11(uiLedLayer2.getLed11().getState());		
-		layer2.setLed12(uiLedLayer2.getLed12().getState());		
-		layer2.setLed13(uiLedLayer2.getLed13().getState());		
-		layer2.setLed14(uiLedLayer2.getLed14().getState());		
-		layer2.setLed15(uiLedLayer2.getLed15().getState());	
+		saveLedStates(layer2, uiLedLayer2);		
 
 		LedLayer layer3 = scenarioStep.getLayer3();
-		layer3.setLed0(uiLedLayer3.getLed0().getState());
-		layer3.setLed1(uiLedLayer3.getLed1().getState());
-		layer3.setLed2(uiLedLayer3.getLed2().getState());		
-		layer3.setLed3(uiLedLayer3.getLed3().getState());		
-		layer3.setLed4(uiLedLayer3.getLed4().getState());		
-		layer3.setLed5(uiLedLayer3.getLed5().getState());		
-		layer3.setLed6(uiLedLayer3.getLed6().getState());		
-		layer3.setLed7(uiLedLayer3.getLed7().getState());		
-		layer3.setLed8(uiLedLayer3.getLed8().getState());		
-		layer3.setLed9(uiLedLayer3.getLed9().getState());		
-		layer3.setLed10(uiLedLayer3.getLed10().getState());		
-		layer3.setLed11(uiLedLayer3.getLed11().getState());		
-		layer3.setLed12(uiLedLayer3.getLed12().getState());		
-		layer3.setLed13(uiLedLayer3.getLed13().getState());		
-		layer3.setLed14(uiLedLayer3.getLed14().getState());		
-		layer3.setLed15(uiLedLayer3.getLed15().getState());	
+		saveLedStates(layer3, uiLedLayer3);		
 		
 		scenarioStep.setTime(Integer.parseInt(time.getText()));
+	}
+
+	private void saveLedStates(LedLayer layer, UILedLayer uiLedLayer) {
+		layer.setLed0(uiLedLayer.getLed0().getState());
+		layer.setLed1(uiLedLayer.getLed1().getState());
+		layer.setLed2(uiLedLayer.getLed2().getState());		
+		layer.setLed3(uiLedLayer.getLed3().getState());		
+		layer.setLed4(uiLedLayer.getLed4().getState());		
+		layer.setLed5(uiLedLayer.getLed5().getState());		
+		layer.setLed6(uiLedLayer.getLed6().getState());		
+		layer.setLed7(uiLedLayer.getLed7().getState());		
+		layer.setLed8(uiLedLayer.getLed8().getState());		
+		layer.setLed9(uiLedLayer.getLed9().getState());		
+		layer.setLed10(uiLedLayer.getLed10().getState());		
+		layer.setLed11(uiLedLayer.getLed11().getState());		
+		layer.setLed12(uiLedLayer.getLed12().getState());		
+		layer.setLed13(uiLedLayer.getLed13().getState());		
+		layer.setLed14(uiLedLayer.getLed14().getState());		
+		layer.setLed15(uiLedLayer.getLed15().getState());
 	}
 
 }
