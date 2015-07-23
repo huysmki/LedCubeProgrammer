@@ -4,9 +4,11 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
@@ -31,6 +33,7 @@ import be.kimit.ledcube.programmer.ui.UILedLayer;
 
 public class LedCubeProgrammer extends JFrame implements ActionListener{
 
+	private static final String NEW_MENU = "NEW_MENU";
 	private static final String SAVE_MENU = "SAVE_MENU";
 	private static final String LOAD_MENU = "LOAD_MENU";
 	private static final String NEXT = "NEXT";
@@ -111,6 +114,10 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 		JMenuBar menuBar = new JMenuBar();
 		JMenu fileMenu = new JMenu("File");
 		menuBar.add(fileMenu);
+		JMenuItem newMenuItem = new JMenuItem("New");
+		newMenuItem.setActionCommand(NEW_MENU);
+		newMenuItem.addActionListener(this);
+		fileMenu.add(newMenuItem);
 		
 		JMenuItem loadMenuItem = new JMenuItem("Load");
 		loadMenuItem.setActionCommand(LOAD_MENU);
@@ -170,9 +177,6 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 			JFileChooser fileChooser = new JFileChooser();
 			if (fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
 				File file = fileChooser.getSelectedFile();
-				OutputFormat format =  new OutputFormat();
-				format.setEncoding("UTF-8");
-				format.setIndenting(true);
 
 				try {
 					XMLEncoder xmlSerializer = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(file)));
@@ -183,10 +187,44 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				
 			}
+		}
+		if (e.getActionCommand() == LOAD_MENU) {
+			JFileChooser fileChooser = new JFileChooser();
+			if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+				File file = fileChooser.getSelectedFile();
 
+				try {
+					XMLDecoder xmlDecoder = new XMLDecoder(new FileInputStream(file));
+					scenario = (Scenario) xmlDecoder.readObject();
+					xmlDecoder.close();
+					setTotalStepsCounter();
+					stepCounter.setText(new String("0"));
+					setPreviousState(0);
+					int totalSteps = Integer.parseInt(totalStepsCounter.getText());
+					setNextState(0, totalSteps);	
+					
+					ScenarioStep scenarioStep = scenario.getScenarioStepAt(0);
+					setUIToScenarioStep(scenarioStep);
+					
+				} catch (FileNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		}
+		if (e.getActionCommand() == NEW_MENU) {
+
+			scenario = new Scenario();
+			setTotalStepsCounter();
+			stepCounter.setText(new String("0"));
+			setPreviousState(0);
+			int totalSteps = Integer.parseInt(totalStepsCounter.getText());
+			setNextState(0, totalSteps);	
 			
+			ScenarioStep scenarioStep = scenario.getScenarioStepAt(0);
+			setUIToScenarioStep(scenarioStep);
+
 		}
 	}
 
