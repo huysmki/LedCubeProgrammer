@@ -31,10 +31,11 @@ import be.kimit.ledcube.programmer.ui.UILedLayer;
 
 public class LedCubeProgrammer extends JFrame implements ActionListener{
 
-	private static final String SAVE = "SAVE";
-	private static final String LOAD = "LOAD";
+	private static final String SAVE_MENU = "SAVE_MENU";
+	private static final String LOAD_MENU = "LOAD_MENU";
 	private static final String NEXT = "NEXT";
 	private static final String PREVIOUS = "PREVIOUS";
+	private static final String SAVE = "SAVE";
 	/**
 	 * 
 	 */
@@ -43,6 +44,7 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 	private JTextField totalStepsCounter;
 	private JButton previousButton;
 	private JButton nextButton;
+	private JButton saveButton;
 	private Scenario scenario = new Scenario();
 	private UILedLayer uiLedLayer0;
 	private UILedLayer uiLedLayer1;
@@ -84,9 +86,15 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 		stepCounter.setEditable(false);
 		nextButton = new JButton("Next");
 		nextButton.addActionListener(this);
+		nextButton.setEnabled(false);
 		nextButton.setActionCommand(NEXT);
 		nextButton.setFocusable(false);
 		stepPanel.add(nextButton);
+		saveButton = new JButton("Save");
+		saveButton.addActionListener(this);
+		saveButton.setActionCommand(SAVE);
+		saveButton.setFocusable(false);
+		stepPanel.add(saveButton);
 		
 		stepPanel.add(new JLabel("time (ms) :"));
 		time = new JTextField("1");
@@ -105,12 +113,12 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 		menuBar.add(fileMenu);
 		
 		JMenuItem loadMenuItem = new JMenuItem("Load");
-		loadMenuItem.setActionCommand(LOAD);
+		loadMenuItem.setActionCommand(LOAD_MENU);
 		loadMenuItem.addActionListener(this);
 		fileMenu.add(loadMenuItem);
 		
 		JMenuItem saveMenuItem = new JMenuItem("Save");
-		saveMenuItem.setActionCommand(SAVE);
+		saveMenuItem.setActionCommand(SAVE_MENU);
 		saveMenuItem.addActionListener(this);
 		fileMenu.add(saveMenuItem);
 		
@@ -123,22 +131,32 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getActionCommand() == NEXT) {
+		if (e.getActionCommand() == SAVE) {
 			int index = Integer.parseInt(stepCounter.getText());
-			stepCounter.setText(String.valueOf( index + 1));
 			ScenarioStep scenarioStep = scenario.getScenarioStepAt(index);
 
 			if (scenarioStep == null){
 				scenarioStep = new ScenarioStep();
 				scenario.getScenarioSteps().add(scenarioStep);
+				setTotalStepsCounter();
 			}
 			saveUIToScenarioStep(scenarioStep);
-			setPreviousState(index + 1);
-			scenarioStep = scenario.getScenarioStepAt(index + 1);
+			setPreviousState(index);
+			int totalSteps = Integer.parseInt(totalStepsCounter.getText());
+			setNextState(index, totalSteps);
+			
+		}
+		if (e.getActionCommand() == NEXT) {
+			int index = Integer.parseInt(stepCounter.getText());
+			stepCounter.setText(String.valueOf( index + 1));
+
+			ScenarioStep scenarioStep = scenario.getScenarioStepAt(index + 1);
 			if (scenarioStep != null) {
 				setUIToScenarioStep(scenarioStep);
 			}
-			
+			setPreviousState(index + 1);
+			int totalSteps = Integer.parseInt(totalStepsCounter.getText());
+			setNextState(index + 1, totalSteps);			
 		}
 		if (e.getActionCommand() == PREVIOUS) {
 			int index = Integer.parseInt(stepCounter.getText());
@@ -146,8 +164,9 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 			ScenarioStep scenarioStep = scenario.getScenarioStepAt(index - 1);
 			setUIToScenarioStep(scenarioStep);
 			setPreviousState(index - 1);
-		}	
-		if (e.getActionCommand() == SAVE) {
+			int totalSteps = Integer.parseInt(totalStepsCounter.getText());
+			setNextState(index - 1, totalSteps);		}	
+		if (e.getActionCommand() == SAVE_MENU) {
 			JFileChooser fileChooser = new JFileChooser();
 			if (fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
 				File file = fileChooser.getSelectedFile();
@@ -169,9 +188,15 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 
 			
 		}
-		
-		setTotalStepsCounter();
+	}
 
+	private void setNextState(int index, int totalSteps) {
+		if (index < totalSteps) {
+			nextButton.setEnabled(true);
+		} else {
+			nextButton.setEnabled(false);
+		}
+		
 	}
 
 	private void setTotalStepsCounter() {
