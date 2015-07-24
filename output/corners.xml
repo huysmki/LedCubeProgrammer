@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_20" class="java.beans.XMLDecoder">
+ <object class="be.kimit.ledcube.data.Scenario" id="Scenario0">
+  <void property="scenarioSteps">
+   <void method="add">
+    <object class="be.kimit.ledcube.data.ScenarioStep" id="ScenarioStep0">
+     <void property="layer1">
+      <void property="led0">
+       <boolean>true</boolean>
+      </void>
+      <void property="led12">
+       <boolean>true</boolean>
+      </void>
+      <void property="led15">
+       <boolean>true</boolean>
+      </void>
+      <void property="led3">
+       <boolean>true</boolean>
+      </void>
+     </void>
+     <void property="time">
+      <int>1000</int>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>

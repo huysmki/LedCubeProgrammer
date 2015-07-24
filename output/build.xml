@@ -3,16 +3,16 @@
     <!--this file was created by Eclipse Runnable JAR Export Wizard-->
     <!--ANT 1.7 is required                                        -->
     <target name="create_run_jar">
-        <jar destfile="/Users/Kim/Documents/workspace/LedCubeProgrammer/output/LedCubePlayer.jar" filesetmanifest="mergewithoutmain">
+        <jar destfile="LedCubePlayer.jar" filesetmanifest="mergewithoutmain">
             <manifest>
                 <attribute name="Main-Class" value="be.kimit.ledcube.player.LedCubePlayer"/>
                 <attribute name="Class-Path" value="."/>
             </manifest>
-            <fileset dir="/Users/Kim/Documents/workspace/LedCubeProgrammer/bin"/>
-            <zipfileset excludes="META-INF/*.SF" src="/Users/Kim/Documents/workspace/LedCubeProgrammer/lib/pi4j-core.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="/Users/Kim/Documents/workspace/LedCubeProgrammer/lib/pi4j-device.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="/Users/Kim/Documents/workspace/LedCubeProgrammer/lib/pi4j-gpio-extension.jar"/>
-            <zipfileset excludes="META-INF/*.SF" src="/Users/Kim/Documents/workspace/LedCubeProgrammer/lib/pi4j-service.jar"/>
+            <fileset dir="../bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/pi4j-core.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/pi4j-device.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/pi4j-gpio-extension.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/pi4j-service.jar"/>
         </jar>
     </target>
 </project>

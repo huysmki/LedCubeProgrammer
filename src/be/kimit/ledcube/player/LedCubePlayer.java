@@ -113,7 +113,7 @@ public class LedCubePlayer implements Runnable{
 	        Gpio.delay(SLEEP_TIME);
 	        
 	        Gpio.digitalWrite(27, 0);
-	        for (int x=0; x < 15 ; x++ ) {
+	        for (int x=0; x < 16 ; x++ ) {
 	        	Gpio.digitalWrite(x, layer2[x]);
 	        }   
 	        Gpio.digitalWrite(28, 1);	
