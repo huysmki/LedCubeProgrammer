@@ -219,11 +219,10 @@ public class LedCubeProgrammer extends JFrame implements ActionListener{
 			setTotalStepsCounter();
 			stepCounter.setText(new String("0"));
 			setPreviousState(0);
-			int totalSteps = Integer.parseInt(totalStepsCounter.getText());
-			setNextState(0, totalSteps);	
-			
-			ScenarioStep scenarioStep = scenario.getScenarioStepAt(0);
-			setUIToScenarioStep(scenarioStep);
+			setNextState(0, 0);	
+			ScenarioStep step = new ScenarioStep();
+			step.setTime(1);
+			setUIToScenarioStep(step);
 
 		}
 	}
