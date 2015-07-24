@@ -14,5 +14,16 @@
             <zipfileset excludes="META-INF/*.SF" src="../lib/pi4j-gpio-extension.jar"/>
             <zipfileset excludes="META-INF/*.SF" src="../lib/pi4j-service.jar"/>
         </jar>
-    </target>
+        <jar destfile="LedCubeProgrammer.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="be.kimit.ledcube.programmer.LedCubeProgrammer"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="../bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/pi4j-core.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/pi4j-device.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/pi4j-gpio-extension.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/pi4j-service.jar"/>
+        </jar>
+     </target>
 </project>
